@@ -1,2 +1,2 @@
 # js-utils
-javascript tool functions
+javascript tools collection
