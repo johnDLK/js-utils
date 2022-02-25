@@ -1,4 +1,4 @@
-import { deepClone } from '../index.js';
+import deepClone from '../deepClone';
 
 (function(){
   let abc = {

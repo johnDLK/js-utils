@@ -1,4 +1,19 @@
-export const deepClone = (source, srcStack = [], distStack = []) => {
+
+const class2type = {};
+'Boolean Number String Function Array Date RegExp Object Error'.split(' ').forEach(name => {
+  class2type['[object ' + name + ']'] = name.toLowerCase();
+});
+
+const type = (obj) => {
+  if (obj == null) {
+    return obj + '';
+  }
+  return typeof obj === 'object' || typeof obj === 'function' ?
+    class2type[Object.prototype.toString.call(obj)] || 'object' :
+    typeof obj;
+}
+
+const deepClone = (source, srcStack = [], distStack = []) => {
   if (source === null) { return null; }
   let target;
   switch (type(source)) {
@@ -45,3 +60,6 @@ export const deepClone = (source, srcStack = [], distStack = []) => {
   }
   return target;
 }
+
+
+export default deepClone;
