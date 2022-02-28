@@ -1,6 +1,6 @@
 {
   "name": "@john_dlk/js-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "javascript tools collection",
   "main": "index.js",
   "scripts": {
